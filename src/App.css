@@ -4,6 +4,7 @@
     flex-direction: column;
     gap: 10px;
     padding: 1rem;
+    color: white;
   }
   
   table {
@@ -20,11 +21,11 @@
   }
   
   th {
-    background-color: rgb(117, 201, 250);
+    background-color: rgb(66, 83, 235);
   }
   
   td {
-    background-color: rgb(205, 235, 253);
+    background-color: rgb(108, 120, 233);
   }
   
   form {
@@ -39,4 +40,14 @@
   
   form * {
     font-size: 28px;
+  }
+
+  button {
+      background-color: rgb(33, 29, 255);
+      color: white;
+      border: 0;
+      padding: 8px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
   }
