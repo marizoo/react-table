@@ -165,6 +165,26 @@ const handleEditFormSubmit = (ev) => {
 //! to finish off the APP
 // need to add the "Cancel" and "Delete" button.
 //? C.01. make a Cancel function to cancel editing the Form.
+// all we need to do is set the edit contact ID, back to null
+const handleCancelClick = () => {
+    setEditContactId(null);
+  }
+// then we'll pass this function to a button inside <EditableRow /> "<button type="button" onClick={onHandleCancelClick}>Cancel</button>" 
+
+
+//! to finish off the APP
+//  "Delete" button.
+//? C.02. make a DELETE function to delete
+// we will remove the row from state. this will be similar to B.02.Add EDIT BUTTON handleEditClick.
+const handleDeleteClick = (contactId) => {
+    const newContacts = [...contacts];
+
+    const index = contacts.findIndex( (contact) => contact.id === contactId);
+
+    newContacts.splice(index, 1);
+    setContacts(newContacts);
+  }
+// next we only need to add delete button inside <ReadOnlyRow /> <button onClick={() => onHandleDeleteClick(contact.id)} > Delete </button>
 
 
 

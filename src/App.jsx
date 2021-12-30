@@ -123,6 +123,21 @@ const [editContactId, setEditContactId] = useState(null);
 
 }
 
+//? C.01. make a Cancel function to cancel editing the Form.
+  const handleCancelClick = () => {
+    setEditContactId(null);
+  }
+
+//? C.02. make a DELETE function to delete
+  const handleDeleteClick = (contactId) => {
+    const newContacts = [...contacts];
+
+    const index = contacts.findIndex( (contact) => contact.id === contactId);
+
+    newContacts.splice(index, 1);
+    setContacts(newContacts);
+  }
+
 
   return (
     <div className='app-container'>
